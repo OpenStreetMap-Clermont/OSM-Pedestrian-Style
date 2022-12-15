@@ -1,0 +1,133 @@
+{
+  "bounds": [
+    3.0771,
+    45.774,
+    3.0783,
+    45.7746
+  ],
+  "center": [
+    3.0777,
+    45.7744,
+    20
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 20,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        2.955537599999999,
+        45.56095980040505,
+        3.2512718,
+        45.895379100358426
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT *, tags->'footway' as footway FROM planet_osm_line WHERE highway='footway' and tags->'footway'='sidewalk') as _subquery",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "329008.9406523738,5710269.7086948985,361929.92120653,5763599.469154761",
+        "host": "localhost",
+        "dbname": "osm"
+      },
+      "id": "sidewalk",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "sidewalk",
+      "layerId": "sidewalk"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        2.955537599999999,
+        45.56095980040505,
+        3.2512718,
+        45.895379100358426
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT *, tags->'footway' as footway FROM planet_osm_line WHERE highway='footway' and tags->'footway'='crossing') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "329008.9406523738,5710269.7086948985,361929.92120653,5763599.469154761",
+        "host": "localhost",
+        "dbname": "osm"
+      },
+      "id": "crossing",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "crossing",
+      "layerId": "crossing"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        2.955537599999999,
+        45.56095980040505,
+        3.2512718,
+        45.895379100358426
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "329008.9406523738,5710269.7086948985,361929.92120653,5763599.469154761",
+        "host": "localhost",
+        "dbname": "osm"
+      },
+      "id": "planetosmline",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "planetosmline",
+      "layerId": "planetosmline",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        2.9976776,
+        45.72390030038317,
+        3.1964822999999996,
+        45.83165000036781
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT *, tags->'kerb' as kerb, tags->'tactile_paving' as tactile_paving FROM planet_osm_point WHERE barrier='kerb') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "333699.9439944024,5736213.906920751,355830.7819657119,5753411.935815668",
+        "host": "localhost",
+        "dbname": "osm"
+      },
+      "id": "kerb",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "kerb",
+      "layerId": "kerb"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Pigeon-Cramier",
+  "description": "",
+  "attribution": ""
+}
